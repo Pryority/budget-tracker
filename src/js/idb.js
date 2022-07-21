@@ -56,7 +56,7 @@ function checkIndexDB() {
             })
                 .then(response => response.json())
                 .then(() => {
-                    // Clear indexdb store after successful POST
+                    // Clear indexDB store after the POST request is successful
                     const transaction = db.transaction(['pendingTx'], 'readwrite');
 
                     // Access the pending transaction object store
@@ -64,7 +64,10 @@ function checkIndexDB() {
 
                     // Clear all of the items in pending transaction object store
                     store.clear();
+
                     alert("All transactions stored offline have been added to the database.");
+                }).catch((err) => {
+                    console.log(err);
                 });
         };
     };
