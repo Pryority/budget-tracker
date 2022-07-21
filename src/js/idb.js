@@ -2,12 +2,11 @@ const indexedDB = window.indexedDB;
 
 let db;
 
-const request = indexedDB.open("txDB", 1);
+const request = indexedDB.open("TxDB", 1);
 
 request.onupgradeneeded = function (event) {
     db = event.target.result;
     db.createObjectStore('pendingTx', { autoIncrement: true });
-
 }
 
 request.onsuccess = function (event) {
