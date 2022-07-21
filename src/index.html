@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#317EFB">
   <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
-  <link href="/dist/output.css" rel="stylesheet">
+  <link href="/src/dist/output.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -20,10 +20,10 @@
     </div>
 
     <div class="form">
-      <input type="text" id="t-name" placeholder="Name of transaction" />
-      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class=""></i> Add Funds</button>
-      <button id="sub-btn"><i class=""></i> Subtract Funds</button>
+      <input type="text" id="t-name" class="p-4"placeholder="Name of transaction" />
+      <input type="number" min="0" id="t-amount" class="border-2 bg-slate-500 ring-1" placeholder="Transaction amount" />
+      <button id="add-btn" class="bg-red-500"><i class="bg-slate-500"></i> Add Funds</button>
+      <button id="sub-btn" class="border-2 bg-slate-500 ring-1"><i class=""></i> Subtract Funds</button>
       <p class="error"></p>
     </div>
 
@@ -43,7 +43,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="./assets/js/idb.js"></script>
+  <script src="js/idb.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
